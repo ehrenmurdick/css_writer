@@ -1,3 +1,4 @@
+require File.dirname(__FILE__) + '/selector.rb'
 class Rcss
   attr_accessor :selectors
   def initialize
