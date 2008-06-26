@@ -1,14 +1,17 @@
 require File.dirname(__FILE__) + '/selector.rb'
 class Rcss
   attr_accessor :selectors
+  # +nodoc+ 
   def initialize
     @output = ""
     @selectors = {}
     @headers = []
   end
 
+  # start a css dsl in a block
   def css &block
     instance_eval &block
+    self
   end
 
   def header str
