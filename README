@@ -1,0 +1,34 @@
+CSS::Writer is for generating CSS from ruby code, similar in appearance to markaby. 
+
+Example:
+
+require 'css_writer'
+
+writer = CSS::Writer.new
+writer.css do
+  body do
+    backgroundColor 'red'
+  end
+
+  div '.class' do
+    fontWeight 'bold'
+  end
+
+  div do
+    input do
+      color '#eee'
+    end
+  end
+end
+writer.render
+
+Produces:
+body {
+  background-color: red;
+}
+div.class {
+  font-weight: bold;
+}
+div input {
+  color: #eee;
+}
