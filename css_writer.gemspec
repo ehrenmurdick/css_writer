@@ -1,4 +1,3 @@
-require 'rubygems'
 SPEC = Gem::Specification.new do |s|
   s.name = "css_writer"
   s.version = "0.0.4"
