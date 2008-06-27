@@ -2,16 +2,16 @@ require 'rake'
 require 'rake/gempackagetask'
 
 spec = Gem::Specification.new do |s| 
-  s.name = "rcss"
-  s.version = "0.0.1"
+  s.name = "css_writer"
+  s.version = "0.0.2"
   s.author = "Ehren Murdick"
   s.email = "ehren.murdick@gmail.com"
   s.homepage = "http://theedgecase.com"
   s.platform = Gem::Platform::RUBY
-  s.summary = "RCss: Ruby CSS"
+  s.summary = "CSS::Writer is css in ruby"
   s.files = FileList["{bin,lib}/**/*"].to_a
-  s.require_path = "lib"
-  s.autorequire = "rcss"
+  s.require_path = "."
+  s.autorequire = "init"
   s.has_rdoc = true
   s.extra_rdoc_files = ["README"]
 end
