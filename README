@@ -32,3 +32,12 @@ div.class {
 div input {
   color: #eee;
 }
+
+You can also pass true into #render resulting in a cheap minification of the output css a la:
+
+writer.render(true)
+
+Resulting in:
+
+body{background-color:red;}div.class{font-weight:bold;}div input{color:#eee;}
+
