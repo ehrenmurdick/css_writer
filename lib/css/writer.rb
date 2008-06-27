@@ -22,7 +22,7 @@ module CSS
       header "@import \"#{path}\";"
     end
 
-    def any id_or_class, &block
+    def any id_or_class = '', &block
       if id_or_class.to_s == ''
         send("*", "", &block)
       else
@@ -46,7 +46,7 @@ module CSS
       res << @headers.join("\n")
       res << "\n"
       @selectors.each_value do |s|
-        res << s.render(minified)
+        res << s.render(minified) unless s.property.size == 0
       end
       res
     end
