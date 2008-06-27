@@ -1,2 +1,2 @@
-require 'lib/css/selector.rb'
-require 'lib/css/writer.rb'
+require 'css/selector.rb'
+require 'css/writer.rb'
