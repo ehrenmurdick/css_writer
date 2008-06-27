@@ -1,2 +1,2 @@
-require 'css/selector.rb'
-require 'css/writer.rb'
+require File.dirname(__FILE__) + '/css/selector.rb'
+require File.dirname(__FILE__) + '/css/writer.rb'
