@@ -1,6 +1,6 @@
 SPEC = Gem::Specification.new do |s|
   s.name = "css_writer"
-  s.version = "0.0.4"
+  s.version = "1.0.0"
   s.author = "Ehren Murdick"
   s.email = "ehren.murdick@gmail.com"
   s.homepage = "http://theedgecase.com"
