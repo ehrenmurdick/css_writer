@@ -9,7 +9,8 @@ module CSS
     end
 
     # start a css dsl in a block
-    def css &block
+    def css locals = {}, &block
+      @locals = locals
       instance_eval &block
       self
     end
@@ -32,9 +33,9 @@ module CSS
 
     def method_missing method_name, id_or_class = '', &block
       if id_or_class =~ /#/
-        s = Selector.new '', id_or_class, self
+        s = Selector.new '', id_or_class, self, nil, @locals
       else
-        s = Selector.new method_name, id_or_class, self
+        s = Selector.new method_name, id_or_class, self, nil, @locals
       end
       s = @selectors[s.name] if @selectors[s.name]
       s.instance_eval &block
