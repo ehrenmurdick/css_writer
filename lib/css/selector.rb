@@ -21,6 +21,10 @@ module CSS
       end
     end
 
+    def url str
+      "url(#{str})"
+    end
+
 
     def any id_or_class = '', &block
       if id_or_class.to_s == ''
